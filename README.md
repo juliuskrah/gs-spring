@@ -1,7 +1,13 @@
-# Spring: Getting Started
+[ ![Codeship Status for juliuskrah/gs-spring](https://app.codeship.com/projects/e569e470-5611-0135-36a0-7646c47fdefc/status?branch=spring)](https://app.codeship.com/projects/235856)
+# Getting Started with JSR 330 (Spring)
 This is the source code for [Getting started with Spring and Dependency Injection](http://juliuskrah.com/blog/2016/12/10/introduction-to-spring-and-dependency-injection-jsr-330/) Guide.
 
 ## Running the sample
-1. clone the project: `git clone git@github.com:juliuskrah/gs-spring.git`
-2. Import into IDE
-3. Run `main` method
+clone the project: `git clone https://github.com/juliuskrah/gs-spring.git`
+
+Run `main` method
+
+```bash
+mvnw clean compile exec:java -Dexec.mainClass="com.juliuskrah.gs.Application"   # Windows
+./mvnw clean compile exec:java -Dexec.mainClass="com.juliuskrah.gs.Application" # Linux, MacOS
+```
