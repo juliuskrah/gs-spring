@@ -2,7 +2,6 @@ package com.juliuskrah.gs;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 
@@ -11,10 +10,12 @@ import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
+import javax.inject.Inject;
+
 @RunWith(SpringRunner.class)
 @ContextConfiguration(classes = { Application.class })
 public class ApplicationTest {
-    @Autowired
+    @Inject
     private MessageService messageService;
 
     @Test
