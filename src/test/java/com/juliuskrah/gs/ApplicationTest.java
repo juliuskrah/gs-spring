@@ -1,20 +1,17 @@
 package com.juliuskrah.gs;
 
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringRunner;
+import org.jvnet.hk2.testing.junit.HK2Runner;
 
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.CoreMatchers.notNullValue;
 import static org.junit.Assert.assertThat;
 
-@RunWith(SpringRunner.class)
-@ContextConfiguration(classes = { Application.class })
-public class ApplicationTest {
-    @Autowired
+import javax.inject.Inject;
+
+public class ApplicationTest extends HK2Runner {
+    @Inject
     private MessageService messageService;
 
     @Test
@@ -22,7 +19,7 @@ public class ApplicationTest {
         String message = messageService.getMessage();
 
         assertThat(message, is(notNullValue()));
-        assertThat(message, is(equalTo(message)));
+        assertThat(message, is(equalTo("Hello World!")));
     }
     
 }

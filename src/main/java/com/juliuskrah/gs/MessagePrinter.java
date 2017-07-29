@@ -2,9 +2,9 @@ package com.juliuskrah.gs;
 
 import javax.inject.Inject;
 
-import org.springframework.stereotype.Component;
+import org.jvnet.hk2.annotations.Service;
 
-@Component
+@Service
 public class MessagePrinter {
 	private MessageService messageService;
 
