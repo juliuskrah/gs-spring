@@ -22,7 +22,7 @@ public class ApplicationTest {
         String message = messageService.getMessage();
 
         assertThat(message, is(notNullValue()));
-        assertThat(message, is(equalTo(message)));
+        assertThat(message, is(equalTo("Hello World!")));
     }
     
 }
